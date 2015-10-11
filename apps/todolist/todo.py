@@ -6,7 +6,6 @@ __author__ = 'Albert'
 
 @route('/todo')
 def todo_list():
-    print name
     conn = sqlite3.connect('todo.db')
     c = conn.cursor()
     c.execute("SELECT id, task FROM todo WHERE status LIKE '1'")
